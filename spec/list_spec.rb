@@ -18,7 +18,7 @@ describe(List) do
     it("sets its ID when you save it") do
       list = List.new({:name => "Epicodus stuff", :id => nil})
       list.save()
-      expect(list.id()).to(be_an_instance_of(Integer)) # don't know what specific ID the database will assign it, so all we can do is check to make sure the ID is an Integer.
+      expect(list.id()).to(be_an_instance_of(Fixnum))
     end
   end
 

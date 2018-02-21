@@ -1,12 +1,12 @@
-# To Do List
+# To-Do List
 
-#### A To Do List created with PostgreSQL, Sinatra, and Ruby. 02/18/2018
+#### A To-Do List App created with PostgreSQL, Sinatra, and Ruby. 02/20/2018
 
-#### By **Hannah Lee**
+#### By **Maggie Summers**
 
 ## Description
 
-A Sinatra application written in Ruby and to practice learning PostgreSQL.
+A Sinatra application to make lists and add to-do's, written in Ruby to practice learning PostgreSQL.
 
 #### Behavior
 1. Allow user to create and save a task list.
@@ -16,13 +16,9 @@ A Sinatra application written in Ruby and to practice learning PostgreSQL.
 
 * Clone this repository
 
-## Known Bugs
-
-None
-
 ## Support and contact details
 
-If you have any questions or concerns, please contact me at: www.github.com/RunHannah.
+If you have any questions or concerns, please submit a pull request or contact me.
 
 ## Technologies Used
 
@@ -30,4 +26,4 @@ If you have any questions or concerns, please contact me at: www.github.com/RunH
 
 ### License
 
-Copyright (c) 2018  **Hannah Lee**
+Copyright (c) 2018  **Maggie Summers**
