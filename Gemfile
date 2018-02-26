@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'pg'
 gem 'rspec'
-gem 'pry'
+gem 'capybara'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'capybara'
-gem 'pg'
+gem 'sinatra-activerecord'
+gem 'rake'

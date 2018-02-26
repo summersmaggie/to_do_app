@@ -1,5 +1,13 @@
 <h1>Welcome to the To Do App</h1>
 
+<p>Here are all your tasks:</p>
+
+<ul>
+  <% @tasks.not_done().each do |task| %>
+    <li><%= task.description %></li>
+  <% end %>
+</ul>
+
 <div class="container">
   <a href="/lists">View All Lists</a>
   <a href="/lists/new">Add New List</a>

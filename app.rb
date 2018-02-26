@@ -1,15 +1,12 @@
 require("sinatra")
 require("sinatra/reloader")
+require("sinatra/activerecord")
 also_reload("lib/**/*.rb")
 require("./lib/task")
 require("./lib/list")
-require("pg")
-
-# DB = PG.connect({:dbname => "to_do"}) #connect to NON-TEST db
-
-DB = PG.connect({:dbname => "to_do_test"}) # change back to above when done testing
 
 get('/') do
+  @tasks = Task.all()
   erb(:index)
 end
 
@@ -53,4 +50,17 @@ patch("/lists/:id") do
   @list = List.find(params.fetch("id").to_i())
   @list.update({:name => name})
   erb(:list)
+end
+
+get('/tasks/:id/edit') do
+  @task = Task.find(params.fetch("id").to_i())
+  erb(:task_edit)
+end
+
+patch("/tasks/:id") do
+  description = params.fetch("description")
+  @task = Task.find(params.fetch("id").to_i())
+  @task.update({:description => description})
+  @tasks = Task.all()
+  erb(:index)
 end
